@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="Style/styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header>
+        <div class="logo">
+            <h1>Mi Portafolio</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <h1 class="section-title">Contáctame</h1>
+
+            <p class="contact-description">
+                Cuéntame un poco sobre ti y déjame conocer qué te trae por aquí.
+            </p>
+
+            <form class="contact-form">
+
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="fname">Tu nombre y apellidos:</label>
+                    <input
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        placeholder="Escribe tu nombre"
+                        required
+                    >
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group">
+                    <label for="email">Tu correo electrónico:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+                </div>
+
+                <!-- Carrera -->
+                <div class="form-group">
+                    <label for="career">¿Qué estudias o a qué te dedicas?</label>
+                    <input
+                        type="text"
+                        id="career"
+                        name="career"
+                        placeholder="Escribe tu carrera u ocupación"
+                    >
+                </div>
+
+                <!-- Cómo me conoció -->
+                <div class="form-group">
+                    <label for="how">¿Cómo conociste mi portafolio?</label>
+                    <select id="how" name="how" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Universidad">Universidad</option>
+                        <option value="Redes sociales">Redes sociales</option>
+                        <option value="Recomendación">Recomendación de alguien</option>
+                        <option value="Internet">Búsqueda en Internet</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <!-- Motivo del contacto -->
+                <div class="form-group">
+                    <label for="reason">¿Cuál es el motivo de tu contacto?</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Propuesta laboral">Propuesta laboral</option>
+                        <option value="Colaboración">Colaboración en un proyecto</option>
+                        <option value="Consulta académica">Consulta académica</option>
+                        <option value="Interés en proyectos">Interés en mis proyectos</option>
+                        <option value="Otro">Otro motivo</option>
+                    </select>
+                </div>
+
+                <!-- Proyecto de interés -->
+                <div class="form-group">
+                    <label for="interest">¿Qué área de la tecnología te interesa más?</label>
+                    <select id="interest" name="interest">
+                        <option value="">Selecciona un área</option>
+                        <option value="Desarrollo web">Desarrollo web</option>
+                        <option value="Desarrollo de software">Desarrollo de software</option>
+                        <option value="Inteligencia artificial">Inteligencia artificial</option>
+                        <option value="Ciberseguridad">Ciberseguridad</option>
+                        <option value="Otra">Otra</option>
+                    </select>
+                </div>
+
+                <!-- Proyecto favorito -->
+                <div class="form-group">
+                    <label for="project">
+                        ¿Hay algún proyecto de mi portafolio que haya llamado tu atención?
+                    </label>
+                    <input
+                        type="text"
+                        id="project"
+                        name="project"
+                        placeholder="Cuéntame cuál"
+                    >
+                </div>
+
+                <!-- Mensaje -->
+                <div class="form-group">
+                    <label for="message">¿Te gustaría contarme algo más?</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Escribe aquí tu mensaje..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn primary form-button">
+                    Enviar respuestas
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+</body>
+</html>

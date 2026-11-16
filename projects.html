@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Mi Portafolio</title>
+    <link rel="stylesheet" href="Style/styles.css">
+    <style>
+        /* Estilos específicos de la sección de proyectos */
+        /* Navegación: mismos colores y apariencia que el resto del portafolio */
+        header nav {
+            display: block;
+        }
+
+        header nav ul {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm, 1rem);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            display: inline-block;
+            padding: var(--spacing-xs, 0.5rem) var(--spacing-sm, 1rem);
+            border-radius: var(--border-radius, 5px);
+            color: var(--dark-color, #333);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--primary-color, #3498db);
+        }
+
+        header nav ul li a.active {
+            background-color: var(--primary-color, #3498db);
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            header nav.active {
+                display: block;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            header nav ul li a {
+                display: block;
+                padding: 15px 20px;
+                border-radius: 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+        }
+
+        .projects-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .projects-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            background: #eaf4fb;
+        }
+
+        .project-info {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .project-info p {
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0 18px;
+        }
+
+        .project-tags span {
+            background: #edf2f7;
+            color: #2c3e50;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 0.85rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: auto;
+            padding: 10px 16px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .project-link:hover {
+            background: #2478b5;
+        }
+
+        .project-note {
+            text-align: center;
+            margin-top: 28px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Mi Portafolio</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="projects.html" class="active">Proyectos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main class="projects-section">
+        <div class="projects-heading">
+            <h2>Mis proyectos</h2>
+            <p>Estos son algunos proyectos que representan mi aprendizaje y práctica en programación.</p>
+        </div>
+
+        <section class="projects-grid" aria-label="Lista de proyectos">
+            <article class="project-card">
+                <div class="project-image" aria-hidden="true">💻</div>
+                <div class="project-info">
+                    <h3>Mi página web personal</h3>
+                    <p>
+                        Un sitio web personal creado para presentarme, compartir información
+                        sobre mi formación y mostrar mis habilidades y proyectos.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Diseño web</span>
+                    </div>
+                    <a class="project-link" href="index.html">Ver página</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image" aria-hidden="true">📝</div>
+                <div class="project-info">
+                    <h3>Lista de tareas</h3>
+                    <p>
+                        Una aplicación para escribir tareas pendientes, agregarlas a una lista
+                        y marcarlas como completadas. Ayuda a organizar actividades y administrar el tiempo.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a class="project-link" href="#" onclick="alert('Cuando crees la aplicación, cambia este enlace por el archivo correspondiente.'); return false;">Próximamente</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image" aria-hidden="true">🧮</div>
+                <div class="project-info">
+                    <h3>Calculadora de notas académicas</h3>
+                    <p>
+                        Una herramienta para ingresar calificaciones y calcular el promedio.
+                        Puede ayudar a conocer el resultado académico de varias actividades o evaluaciones.
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a class="project-link" href="#" onclick="alert('Cuando crees la calculadora, cambia este enlace por el archivo correspondiente.'); return false;">Próximamente</a>
+                </div>
+            </article>
+        </section>
+
+        <p class="project-note">
+            Estoy trabajando para seguir ampliando esta sección con nuevos proyectos.
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
